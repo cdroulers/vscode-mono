@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using StructureMap;
+using StructureMap.Configuration.DSL;
 
 namespace TestAPI.Controllers
 {
@@ -14,8 +14,6 @@ namespace TestAPI.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            IContainer container = new Container();
-
             return new string[] { "value1", "value2" };
         }
 
